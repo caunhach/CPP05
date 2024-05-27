@@ -880,6 +880,8 @@ void testPresidentialPardonFormSignGradeInRange() {
 
 		std::cout.rdbuf(oldCout);
 
+		std::string expectedOutput = "AForm constructor called\nBureaucrat constructor called\nperson signed PresidentialPardonForm\n";
+		assert(buffer.str() == expectedOutput);
 		assert(f.getIsSign() == true);
 		std::cout << GREEN << "   " << "\u2714" << " Test passed for Sign Grade In Range\n" << RESET;
 	} catch (std::exception& e) {
@@ -899,6 +901,8 @@ void testRobotomyRequestFormSignGradeInRange() {
 		
 		std::cout.rdbuf(oldCout);
 
+		std::string expectedOutput = "AForm constructor called\nBureaucrat constructor called\nperson signed RobotomyRequestForm\n";
+		assert(buffer.str() == expectedOutput);
 		assert(f.getIsSign() == true);
 		std::cout << GREEN << "   " << "\u2714" << " Test passed for Sign Grade In Range\n" << RESET;
 	} catch (std::exception& e) {
@@ -918,6 +922,8 @@ void testShrubberyCreationFormSignGradeInRange() {
 
 		std::cout.rdbuf(oldCout);
 
+		std::string expectedOutput = "AForm constructor called\nBureaucrat constructor called\nperson signed ShrubberyCreationForm\n";
+		assert(buffer.str() == expectedOutput);
 		assert(f.getIsSign() == true);
 		std::cout << GREEN << "   " << "\u2714" << " Test passed for Sign Grade In Range\n" << RESET;
 	} catch (std::exception& e) {

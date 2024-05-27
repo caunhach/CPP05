@@ -641,6 +641,9 @@ void testFormSignGradeInRange() {
 		b.signForm(f);
 
 		std::cout.rdbuf(oldCout);
+
+		std::string expectedOutput = "Form constructor called\nBureaucrat constructor called\nperson signed person\n";
+		assert(buffer.str() == expectedOutput);
 		assert(f.getIsSign() == true);
 	} catch (std::exception& e) {
 		assert(false && "should not thrown an exception");
